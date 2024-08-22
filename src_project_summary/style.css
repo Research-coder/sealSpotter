@@ -1,0 +1,13 @@
+
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 10px;
+}
+
+div {
+    position: absolute;
+    left: 8%;
+    top: 8%;
+}

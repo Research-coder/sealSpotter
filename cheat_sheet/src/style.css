@@ -1,0 +1,21 @@
+
+#slider_container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 10%;
+    bottom: 0;
+}
+
+#image_slider {
+    width: 100%;
+    height: 100%;
+}
+
+#next {
+    position: absolute;
+    right: 2%;
+    top: 30%;
+    width: 8%;
+    height: 30%;
+}

@@ -1,0 +1,317 @@
+
+<!DOCTYPE HTML>
+
+<html>
+<head>
+
+    <title></title>
+    <link rel="icon" href="images_fixed/favicon.ico"/>
+
+    <!-- source the stylesheet -->
+    <link href="css/style.css?update=20190611"
+    	  rel="stylesheet">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-30207207-4"></script>
+    <script src="resources/analytics.js"></script>
+    
+
+
+</head>
+
+
+
+
+
+
+
+<body>
+
+<!-- A hidden jpeg for Facebook to choose -->
+<img src = "images_fixed/hidden_logo.jpg"
+	 id = "hidden_logo" >
+
+<div id = "mainpage">
+
+    <!-- A div for the "landing page" -->
+    <div    id      =   "introduction" >
+        <h1 id = intro_heading></h1>
+        <h3>&nbsp;A portal for citizen scientists to contribute to seal research.</h3>
+        <div id = "intro_div">
+            <p id = "intro"></p>
+        </div>
+
+        <!-- Embedded intro video -->
+        <iframe src = "https://player.vimeo.com/video/337740704?color=f07a65&title=0&byline=0&portrait=0&badge=0"
+                id = "videodiv"
+                width="700"
+                height="400"
+                frameborder="0"
+                webkitallowfullscreen
+                mozallowfullscreen
+                allowfullscreen></iframe>
+                
+        <div id = "before_proceeding_div">
+            <p id = "before_proceeding" ></p>
+        </div>
+        
+        <!-- A text box for the disclaimer text -->
+        <div    id = "termsofuse" >
+        </div>
+
+        <br><br>
+
+        <!-- Button to agree and proceed -->
+        <button id = "proceedbutton">
+                Agree and Proceed
+        </button>
+        <br><br>
+        <p id = "acknowledgement">
+        </p>
+
+    </div>
+
+    <!-- a div for the sign in form -->
+    <div    id      =   "signinform" >
+
+        <br><br>
+        <br><h2 id = "signin_heading"></h2>
+        <h3>Please sign in</h3><br>
+
+        <form   id = "signin" >
+            Name:       
+            <input  type = "text"
+                    name = "user"
+                    id = "userinput"
+                    placeholder = "Your full name/pseudonym"
+                    autofocus >
+            <br><br>
+            First time here? &nbsp; Register:
+            <input  type    = "checkbox"
+                    name    = "register"
+                    id      = "registerbutton" >
+            <br><br>
+            <div    id = "registerdiv">
+                (The below fields are optional):<br><br>
+                Email:
+                <input  type = "text"
+                        name = "email"
+                        placeholder = "Your email address" >
+                <br><br>
+                <select name = "agegroup"
+                        id = "agegroup" >
+                    <option value = "" disabled selected >
+                        -- Age group --</option>
+                    <option value = "lt25"><25</option>
+                    <option value = "25-50">25-50</option>
+                    <option value = "gt50">>50</option>
+                </select>
+                <br><br>
+                <select name = "experience"
+                        id = "experience" >
+                    <option value = "" disabled selected >
+                        -- Wildlife monitoring experience --</option>
+                    <option value = "none">None</option>
+                    <option value = "some">Some</option>
+                    <option value = "lots">Lots</option>
+                </select>
+                <br><br>
+                Your location:
+                <input  type = "text"
+                        name = "location"
+                        placeholder = "Country/State/City" >
+                <br><br>
+            </div>
+            
+            <!--
+            Password:   <input  type = "password"
+                                name = "password"
+                                placeholder = "Enter Password">
+            <br><br>
+        -->
+            <button type = "button"
+                    id = "signinbutton" >
+                    SUBMIT</button>
+        </form>
+
+        <div id = "disclaimer" ></div>
+
+    </div>
+
+    <!-- a div for the comments form -->
+    <div    id      =   "commentsdiv" >
+
+        <br><h2 id = "comments_heading"></h2>
+        <p>Any comments to include for this image?</p>
+        <form   id = "comments" >
+            <textarea   name = "comment"
+                        id = "comment"
+                        placeholder = "Comments (optional)"
+                        cols = "28"
+                        rows = "5" ></textarea>
+            <br><br>
+            <button type = "button"
+                    id = "backtoimage">BACK</button>
+            &nbsp;&nbsp;&nbsp;
+            <button type = "button"
+                    id = "button_submit">SUBMIT</button>
+        </form>
+
+    </div>
+    
+
+    <!-- A div with the image as background
+        We'll put the plot on top of this -->
+    <div    id      =   "base" >
+
+            <!-- The plot div sits above the image -->
+            <div    id      = "plot_div";
+                    class   = "main_image_area" >
+            </div>
+
+            <!-- A blank div to detect clicks goes on top of the plot -->
+            <div    id              =   "click_div";
+                    class           =   "main_image_area" >
+            </div>
+
+    </div>
+
+    <!-- A div to reveal when all images have been classified -->
+    <div id = "finisheddiv">
+
+        <br><h2 id = "finished_heading"></h2>
+        <p id = "finished"></p>
+
+    </div>
+
+    <!-- Example images for classes -->
+    <div id = "example_images">
+        
+    </div>
+
+
+</div>
+
+<div id = "sidepanel" >
+
+    <div id = "logos">
+        <!-- PINP logo and link -->
+        <a href     = "http://www.penguins.org.au";
+            target  = "_blank" >
+            <img src    = "images_fixed/pinp_logo_dark.jpg";
+                 id     = "PINP_logo";
+                 title  = "Phillip Island Nature Parks";
+                 alt    = "Phillip Island Nature Parks";
+                 class  = "logo" >
+        </a>
+
+        <!-- Penguin Foundation logo and link -->
+        <a  href            =   "http://www.penguinfoundation.org.au";
+            target          =   "_blank" >
+
+            <img    src         =   "images_fixed/penguinFoundation_logo.png";
+                    title       =   "Penguin Foundation";
+                    alt         =   "Penguin Foundation";
+                    id          =   "PengFoundation_logo";
+                    class  = "logo" >
+        </a>
+
+        <!-- Telematics Trust logo and link -->
+        <!--
+        <a  href            =   "https://www.telematics.org.au";
+            target          =   "_blank" >
+
+            <img    src         =   "images_fixed/telematics_logo.png";
+                    alt         =   "Telematics Trust";
+                    title       =   "Telematics Trust";
+                    id          =   "TelematicsTrust_logo";
+                    class  = "logo" >
+        </a>
+        -->
+
+    </div>
+
+    <!-- set up the tools div for buttons and logos -->
+    <div id = "tools" >
+
+        <!-- buttons to remove last/all clicked points -->
+        <button id          =   "button_rmvlst";
+                class       =   "wide_button";
+                type        =   "submit"
+        >undo last point</button>
+
+        <button id          =   "button_rmvall";
+                class       =   "wide_button";
+                type        =   "submit"
+        >reset points</button>
+
+        <!-- Set a special div for the radio buttons -->
+        <div id = "radiobuttons_div">
+
+            <!-- the radio buttons are in a form -->
+            Type:</br>
+                <form id = "radiobuttons_form" >
+                    </form>
+        </div>
+
+
+        <!-- Submit button -->
+        <button id          =   "button_submitnow";
+                type        =   "submit";
+                class       =   "wide_button">
+					SUBMIT
+        </button>
+        <br><br>
+
+        <!-- Submit button -->
+        <button id          =   "button_proceed";
+                type        =   "submit":
+                class       =   "wide_button">
+                    SUBMIT<br>w/comment
+        </button>
+
+        <!-- Running count of animals counted -->
+        <p id = "sess_counter">Counted: 0</p>
+        <p id = "img_counter">Images done: 0</p>
+        
+        <br>
+
+        <p>Brightness</p>
+
+        <button id      =   "button_brightness_decrease";
+                class   =   "narrow_button";
+                type    =   "submit">-</button>
+
+        <button id      =   "button_brightness_increase";
+                class   =   "narrow_button";
+                type    =   "submit">+</button>
+
+        <a  id="cheat_sheet_link"
+            href="cheat_sheet"
+            target="_blank"
+            title="Opens in new tab or window">Open cheat sheet</a>
+    </div>
+    
+</div>
+
+    <!-- get the text to put into plain text fields -->
+    <script src="js/text.js?20210408"></script>
+
+    <!-- set up the page as per project settings -->
+    <script src="js/setup.js?20210408"></script>
+    <script src="js/load_first.js"></script>
+
+    <!-- source plotly if necessary -->
+    <!-- cdn is "https://cdn.plot.ly/plotly-latest.min.js" -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js" async>
+    </script>
+
+    <!-- source the javascript functionality -->
+    <script src="js/app.js?20210408"></script>
+
+    <!-- detect Internet Explorer -->
+    <script src="js/detect_ie.js"></script>
+
+
+</body>
+</html>
